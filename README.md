@@ -45,3 +45,32 @@ Antes de executar o script, você precisará configurar algumas variáveis no ar
 email = "SEU_EMAIL_AQUI"  # Insira seu e-mail aqui
 senha = "SUA_SENHA_AQUI"  # Insira sua senha aqui
 url_aula = "URL_DA_PRIMEIRA_AULA_AQUI"  # Insira a URL da primeira aula aqui
+````
+
+
+## Execução
+
+Para executar o script, use o seguinte comando:
+
+```bash
+python main.py
+`````
+
+
+## Observações
+
+- Certifique-se de que o WebDriver esteja configurado corretamente e que o navegador esteja atualizado.
+- O script pode precisar de ajustes dependendo da estrutura da página da plataforma de cursos.
+
+## Contribuições
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
+
+## Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
+
+## 🎁 Premiação
+
+Este projeto foi desenvolvido com o objetivo de participar do desafio e concorrer a R$100 no PIX e a TAG "Vencedor de Desafio" na comunidade OneBitCode. Boa sorte a todos os participantes!
+
