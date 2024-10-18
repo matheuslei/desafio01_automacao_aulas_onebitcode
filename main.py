@@ -63,11 +63,8 @@ try:
 
             if texto_botao == "Concluída":
                 botao_concluir.click()
-                time.sleep(4)  # Aguarda 4 segundos
-                # Verifica novamente o texto do botão
-                texto_botao = botao_concluir.text
-                if texto_botao == "Concluir aula":
-                    botao_concluir.click()
+                time.sleep(2)  # Aguarda 2 segundos
+                driver.refresh() # Atualiza a página
             elif texto_botao == "Concluir aula":
                 botao_concluir.click()
                 time.sleep(4)  # Aguarda a página carregar a próxima aula
