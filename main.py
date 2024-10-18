@@ -72,13 +72,21 @@ try:
                 botao_concluir.click()
                 time.sleep(4)  # Aguarda a página carregar a próxima aula
 
+                try:
+                    parabenizacao_elemento = WebDriverWait(driver, 10).until(
+                        EC.presence_of_element_located((By.XPATH, '//span[text()="Parabéns! Você concluiu"]'))
+                    )
+                    # Localiza o elemento do curso e obtém seu texto
+                    texto_curso_elemento = driver.find_element(By.XPATH, '//span[contains(@class, "text-base font-semibold")]')
+                    texto_curso = texto_curso_elemento.text  # Obtém o texto do curso
+                    print("Parabéns! Você concluiu " + texto_curso)  # Mensagem de parabéns com o texto do curso
+                    break  # Sai do loop se a mensagem de conclusão for encontrada
+                except Exception:
+                    pass  # Não faça nada se o elemento não aparecer
                 # Obtém o novo contador de aulas
                 contador_elemento = driver.find_element(By.XPATH, '//span[contains(text(), "Aula") and contains(text(), "de")]')
                 contador_final = contador_elemento.text
                 print(f"Contador final: {contador_final}")
-
-                # Aqui você pode adicionar uma condição para sair do loop se todas as aulas forem concluídas
-                # Exemplo: se contador_final for igual a "Aula 326 de 326", você pode sair do loop
 
         except Exception as inner_e:
             print(f"Ocorreu um erro ao tentar localizar o botão: {inner_e}")
