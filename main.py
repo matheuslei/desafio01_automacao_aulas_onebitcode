@@ -42,6 +42,9 @@ try:
     login_button.click()
     print_element_info(login_button, "Botão de Login")
 
+    # Aguardar 4 segundos
+    time.sleep(4)
+    
     # Acessa a URL da aula (apenas uma vez)
     driver.get(url_aula)
 
